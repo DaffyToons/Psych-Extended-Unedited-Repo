@@ -267,6 +267,11 @@
 	
 	<!-- Allow Write Access to EXTERNAL_DATA Directory -->
 	<haxedef name="SHARE_MOBILE_FILES" if="mobile" />
+
+	<!-- Whatever these things are for -->
+	<haxedef name="lime_use_old_deltatime" />
+    <haxedef name="lime_disable_motion_sensors" />
+
 	
 	<!-- Do whatever you want I'm tired uninstall and install everytime -->
 	<certificate path="key.keystore" password="psychengine" alias="psychport" alias-password="psychengine" if="android" unless="debug" />
