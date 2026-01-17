@@ -194,7 +194,6 @@ class Main extends Sprite
 
 		FlxG.fixedTimestep = false;
 		FlxG.game.focusLostFramerate = #if mobile 30 #else 60 #end;
-		Application.current.window.vsync = false;
 		FlxG.signals.preUpdate.add(fixSlowdown);
 
 		// shader and mobile device coords fix
@@ -236,7 +235,6 @@ class Main extends Sprite
 
 	/* Fixes the Modpack Switch Slowdown I guess */
 	function fixSlowdown() {
-		Application.current.window.vsync = false;
 		FlxG.fixedTimestep = false; //FUCK, I forgot this
 		if (Reflect.hasField(FlxG.save.data, 'framerate'))
 			FlxG.gameFramerate = FlxG.save.data.framerate;
